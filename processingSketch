@@ -1,3 +1,6 @@
+/************************************************
+MAIN
+************************************************/
 Ball ball;
 Paddle paddleLeft;
 Paddle paddleRight;
@@ -23,6 +26,107 @@ void draw() {
   //Paddles
   paddleLeft.display();
   paddleRight.display();
-  
+}
 
+
+/************************************************
+FUNCTIONS
+************************************************/
+// Control Paddles with keyboard
+void keyPressed() {
+  // move Right Paddle with arrow keys
+  if(key == CODED){
+    if(keyCode == UP) {
+      paddleRight.y -= paddleRight.yspeed;
+    }else if(keyCode == DOWN) {
+      paddleRight.y += paddleRight.yspeed;
+    }
+  }
+  // move Left Paddle with Q (for UP) and A (for DOWN) keys
+  if(key == 'q' || key == 'Q'){
+        paddleLeft.y -= paddleLeft.yspeed;
+      }else if(key == 'a' || key == 'A'){
+        paddleLeft.y += paddleLeft.yspeed;
+      }
+      
+  // return Ball to initial position
+  if(key == 'n') {
+    ball.x = width/2;
+    ball.c = color(72, 242, 142);
+    bgColor = color(0, 43, 54);
+  }
+}
+
+
+/************************************************
+THE BALL
+************************************************/
+class Ball {
+  float r;  // radius
+  float x, y;
+  float xspeed, yspeed;
+  color c = color(72, 242, 142);
+  
+  Ball() {
+    r = width/15;
+    x = r;
+    y = r;
+    xspeed = 10;
+    yspeed = 8;
+  }
+  
+  void move() {
+    x += xspeed;
+    y += yspeed;
+    
+    // check top-bottom edge collission
+    if (y < 0 + r/2 || y > height - r/2) {
+      yspeed *= -1;
+    }
+    
+  }
+  
+  void hitPaddle(){
+    // check if Ball and Paddle Right / Left converge
+    if((x + r/2) >= (paddleRight.x - paddleRight.w/2) && (y > paddleRight.y - paddleRight.h/2) && (y < paddleRight.y + paddleRight.h/2)) {
+      xspeed *= -1;
+    }else if((x - r/2) <= (paddleLeft.x + paddleLeft.w/2) && (y > paddleLeft.y - paddleLeft.h/2) && (y < paddleLeft.y + paddleLeft.h/2)) {
+      xspeed *= -1;
+    }else if(x > width || x < 0){
+      bgColor = color(255, 0, 0);
+      ball.c = bgColor;
+    }
+  }
+  
+  void display() {
+    fill(c);
+    ellipse(x, y, r, r);
+  }
+}
+
+
+/************************************************
+THE PADDLES
+************************************************/
+class Paddle {
+  
+  float x, y;
+  float w, h;
+  float yspeed;
+  color c = color(72, 242, 142);
+  
+  Paddle(float tempX) {
+    x = tempX;
+    y = height/2;
+    w = width/30;
+    h = height/5;
+    yspeed = 25;
+  }
+  
+  void display() {
+    rectMode(CENTER);
+    noStroke();
+    fill(c);
+    rect(x, y, w, h);
+  }
 }
