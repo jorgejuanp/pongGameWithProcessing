@@ -1,0 +1,28 @@
+Ball ball;
+Paddle paddleLeft;
+Paddle paddleRight;
+color bgColor = color(0, 43, 54);
+
+void setup() {
+  size(600, 400);
+  smooth();
+  frameRate(30);
+  ball = new Ball();
+  paddleLeft = new Paddle(0 + width/25);
+  paddleRight = new Paddle(width - width/25);
+}
+
+void draw() {
+  background(bgColor);
+  
+  // Ball
+  ball.move();
+  ball.hitPaddle();
+  ball.display();
+  
+  //Paddles
+  paddleLeft.display();
+  paddleRight.display();
+  
+
+}
