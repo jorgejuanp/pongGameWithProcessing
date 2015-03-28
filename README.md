@@ -9,3 +9,4 @@ Controls for Right Player:
 Arrow keys for UP / DOWN
 
 
+If you want to know the steps I took, you can find it in the Wiki.
