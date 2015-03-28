@@ -1,12 +1,8 @@
 # create Pong game With Processing
 This is the Processing sketch I used to create a simple Pong game.
 
-Controls for Left Player:
-Q key: UP
-A key: DOWN
-
-Controls for Right Player:
-Arrow keys: UP / DOWN
+Controls for Left Player: Q key / UP, A key / DOWN
+Controls for Right Player: Arrow keys for UP / DOWN
 
 ## Basic Process
 1. **Idea**—Start with an idea.
@@ -53,9 +49,8 @@ Develop a program with a circle bouncing against all the walls on the screen
       Display:
         ..*Draw a circle at X and Y location
         
-  ####PART II
-  Make a rectangle whose Y position is controled by the user with the keyboard arrows; 
-  make another rectangle whose Y position is controled by the user with the keyboard (other keys)
+#### PART II
+Make a rectangle whose Y position is controled by the user with the keyboard arrows; make another rectangle whose Y position is controled by the user with the keyboard (other keys)
       **Setup:**
         ..*initialize Paddles, 
       **Draw:**
@@ -79,9 +74,8 @@ Develop a program with a circle bouncing against all the walls on the screen
       Display
         ..*Draw two Paddles specifying its X location
       
-  ####PART III
-  Write a programm that tests if a rectangle and the ball intersect. This
-  will be used to check if the ball hit the rectangle and has to rebound
+#### PART III
+Write a programm that tests if a rectangle and the ball intersect. This will be used to check if the ball hit the rectangle and has to rebound
       **Data:**
       ..*Ball X and Y location
       ..*Paddle X and Y location
@@ -90,20 +84,18 @@ Develop a program with a circle bouncing against all the walls on the screen
       ..*Check if Ball Y position and Paddle Y position converge
       ..*if X and Y converge, reverse Ball direction
       
-  ####PART I CONTINUED
-  Make the ball rebound only on top and bottom walls (not left, nor right).
+#### PART I CONTINUED
+Make the ball rebound only on top and bottom walls (not left, nor right).
   
-  ####PART IV
-  Kick-off: write a program that creates a new ball and moves it against the last 
-  winner.
+#### PART IV
+Kick-off: write a program that creates a new ball and moves it against the last winner.
       Data:
       - new Ball initial X and Y position
       - new Ball direction
       Functions:
       - move Ball the oposite direction from where it got away
       
-  ####PART V
-  POINT! check if a ball got away and show who scored
-  ####PART VI
-  Score: write a program that keeps track of the score (how many points
-  each user has) and shows it on the screen.
+#### PART V
+POINT! check if a ball got away and show who scored
+#### PART VI
+Score: write a program that keeps track of the score (how many points each user has) and shows it on the screen.
