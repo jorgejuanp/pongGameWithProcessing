@@ -51,11 +51,31 @@ Display:
 ..*Draw a circle at X and Y location
 
 ```
+/* MAIN PROGRAM */
+Ball ball;
+color bgColor = color(0, 43, 54);
+
+void setup() {
+  size(600, 400);
+  smooth();
+  frameRate(30);
+  ball = new Ball();
+}
+
+void draw() {
+  background(bgColor);
+  
+  // Ball
+  ball.move();
+  ball.display();
+}
+
+/* THE BALL */
 class Ball {
-  float r;  // radius
-  float x, y;
-  float xspeed, yspeed;
-  color c = color(72, 242, 142);
+  float r;                          // radius
+  float x, y;                       // x and y position
+  float xspeed, yspeed;             // x and y speed
+  color c = color(72, 242, 142);    // color
   
   Ball() {
     r = width/15;
@@ -74,9 +94,9 @@ class Ball {
       yspeed *= -1;
     }
     
-     // check right-left edge collission
-    if (x < 0 - r/2 || x > width - r/2) {
-      yspeed *= -1;
+    // check right-left edge collission
+    if (x < 0 + r/2 || x > width - r/2) {
+      xspeed *= -1;
     }
     
   }
