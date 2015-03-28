@@ -25,29 +25,6 @@ the player that failed has to kick-off again.
 ### 2. Parts
 #### PART I
 Develop a program with a circle bouncing against all the walls on the screen.
-**Setup:**
-..*initialize Ball object
-**Draw:**
-..*Erase background
-..*Set Ball to initial position
-..*Move Ball
-..*Display Ball
-
-**Data:**
-..*X and Y location
-..*Radius
-..*Speed in X and Y directions
-**Functions:**
-Constructor
-..*Set initial X and Y location
-..*Set X and Y speed
-..*Set radius
-Move:
-..*Increment X by speed in X direction
-..*Increment Y by speed in Y direction
-..*If Ball hits any edge, reverse direction
-Display:
-..*Draw a circle at X and Y location
 
 ```
 class Ball {
