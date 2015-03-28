@@ -48,6 +48,45 @@ Move:
 ..*If Ball hits any edge, reverse direction
 Display:
 ..*Draw a circle at X and Y location
+
+```
+class Ball {
+  float r;  // radius
+  float x, y;
+  float xspeed, yspeed;
+  color c = color(72, 242, 142);
+  
+  Ball() {
+    r = width/15;
+    x = r;
+    y = r;
+    xspeed = 10;
+    yspeed = 8;
+  }
+  
+  void move() {
+    x += xspeed;
+    y += yspeed;
+    
+    // check top-bottom edge collission
+    if (y < 0 + r/2 || y > height - r/2) {
+      yspeed *= -1;
+    }
+    
+     // check right-left edge collission
+    if (x < 0 - r/2 || x > width - r/2) {
+      yspeed *= -1;
+    }
+    
+  }
+  
+  void display() {
+    fill(c);
+    ellipse(x, y, r, r);
+  }
+  
+}
+```
         
 #### PART II
 Make a rectangle whose Y position is controled by the user with the keyboard arrows; make another rectangle whose Y position is controled by the user with the keyboard (other keys)
