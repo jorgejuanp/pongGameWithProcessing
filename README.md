@@ -8,7 +8,7 @@ A key: DOWN
 Controls for Right Player:
 Arrow keys: UP / DOWN
 
-##Basic Process
+## Basic Process
 1. **Idea**—Start with an idea.
 2. **Parts**—Break the idea down into smaller parts.
 ....*Algorithm Pseudocode—For each part, work out the algorithm for that part in pseudocode. 
@@ -18,7 +18,7 @@ class.
 3. **Integration**—Take all the classes from Step 2 and integrate them into one larger algorithm.
 
 
-###1. THE IDEA
+### 1. THE IDEA
 The object of this game is to have a ball bouncing on the top and bottom walls. 
 Each player has to avoid the ball to get away through his side of the field. 
 To make so, each player controls a paddle that moves from top to bottom (and viceversa),
@@ -26,8 +26,8 @@ in order to hit the ball. If the player hits the ball, it rebounds.
 If the ball gets away through one side, the player that scored, gets 1 point; 
 the player that failed has to kick-off again.
 
-###2. PARTS
-  ####PART I
+### 2. PARTS
+  #### PART I
   Develop a program with a circle bouncing against all the walls on the screen
       **Setup:**
       ..*initialize Ball object
