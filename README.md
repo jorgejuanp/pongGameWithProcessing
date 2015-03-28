@@ -24,7 +24,7 @@ the player that failed has to kick-off again.
 
 ### 2. Parts
 #### PART I
-Develop a program with a circle bouncing against all the walls on the screen
+Develop a program with a circle bouncing against all the walls on the screen.
 **Setup:**
 ..*initialize Ball object
 **Draw:**
