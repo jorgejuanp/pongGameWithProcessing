@@ -51,51 +51,52 @@ Develop a program with a circle bouncing against all the walls on the screen
         
 #### PART II
 Make a rectangle whose Y position is controled by the user with the keyboard arrows; make another rectangle whose Y position is controled by the user with the keyboard (other keys)
-      **Setup:**
-        ..*initialize Paddles, 
-      **Draw:**
-      ..*erase background
-      ..*Set Paddles to initial position
-      ..*Move Paddles depending on user keyboard
-      ..*Display Paddles
-      
-      **Data:**
-      ..*Initial X location (passing by argument) and Y location 
-      ..*Paddle's width and height
-      ..*Speed in Y direction
-      **Functions:**
-      Constructor
-        ..*Set initial X and Y position
-        ..*Set X to fixed
-        ..*Set Y speed
-      Move
-        ..*Increment Y position when DOWN KEY is pressed
-        ..*Decrement Y position when UP KEY is pressed
-      Display
-        ..*Draw two Paddles specifying its X location
+**Setup:**
+..*initialize Paddles, 
+**Draw:**
+..*erase background
+..*Set Paddles to initial position
+..*Move Paddles depending on user keyboard
+..*Display Paddles
+
+**Data:**
+..*Initial X location (passing by argument) and Y location 
+..*Paddle's width and height
+..*Speed in Y direction
+**Functions:**
+Constructor
+..*Set initial X and Y position
+..*Set X to fixed
+..*Set Y speed
+Move
+..*Increment Y position when DOWN KEY is pressed
+..*Decrement Y position when UP KEY is pressed
+Display
+..*Draw two Paddles specifying its X location
       
 #### PART III
 Write a programm that tests if a rectangle and the ball intersect. This will be used to check if the ball hit the rectangle and has to rebound
-      **Data:**
-      ..*Ball X and Y location
-      ..*Paddle X and Y location
-      **Functions:**
-      ..*check if Ball X position and Paddle X position converge
-      ..*Check if Ball Y position and Paddle Y position converge
-      ..*if X and Y converge, reverse Ball direction
+**Data:**
+..*Ball X and Y location
+..*Paddle X and Y location
+**Functions:**
+..*check if Ball X position and Paddle X position converge
+..*Check if Ball Y position and Paddle Y position converge
+..*if X and Y converge, reverse Ball direction
       
 #### PART I CONTINUED
 Make the ball rebound only on top and bottom walls (not left, nor right).
   
 #### PART IV
 Kick-off: write a program that creates a new ball and moves it against the last winner.
-      Data:
-      - new Ball initial X and Y position
-      - new Ball direction
-      Functions:
-      - move Ball the oposite direction from where it got away
+Data:
+- new Ball initial X and Y position
+- new Ball direction
+Functions:
+- move Ball the oposite direction from where it got away
       
 #### PART V
 POINT! check if a ball got away and show who scored
+
 #### PART VI
 Score: write a program that keeps track of the score (how many points each user has) and shows it on the screen.
