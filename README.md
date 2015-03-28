@@ -50,7 +50,7 @@ Move:
 Display:
 ..*Draw a circle at X and Y location
 
-```
+```processing
 /* MAIN PROGRAM */
 Ball ball;
 color bgColor = color(0, 43, 54);
